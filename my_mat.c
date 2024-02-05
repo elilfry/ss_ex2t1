@@ -4,10 +4,11 @@
 
 #define N 4
 #define INF 9999
-int dist [N][N] ={0}; //duplicate the orginal array
+
 int arr [N][N] ={0};
+int dist [N][N] ={0};
 //1)A) gets 100 numbers inputs (start =a ,end = 100th number)
-void a(){ 
+void inputToArr(){ 
     
 for(int i =0;i<N;i++){
     for(int j=0;j<N;j++){
