@@ -2,7 +2,7 @@
 #include <stdio.h>
  #include "my_mat.h"
 
-#define N 4
+#define N 10
 #define INF 9999
 
 int arr [N][N] ={0};
@@ -79,6 +79,12 @@ void printSolution(int dist[][N]) {
     }
 }
 
+int knapSack (int weights[], int values[] , int selected_bool[]){
 
+
+
+
+    return 0;
+}
 
 

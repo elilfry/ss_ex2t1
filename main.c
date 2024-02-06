@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "my_mat.h"
 
-#define N 4
+#define N 10
 #define INF 9999
 
 
@@ -12,7 +12,7 @@ int arr [N][N] ={0};
 int dist [N][N] ={0}; //duplicate the orginal array
 char choice;
 
-    
+
     printf("Enter  your choice :a,b,c,d;");
     scanf(" %c", &choice);
 
@@ -54,31 +54,31 @@ char choice;
 }
 
 
-// driver's code
-int main()
-{
+// // driver's code
+// int main()
+// {
   
-    /* Let us create the following weighted graph
-            10
-       (0)------->(3)
-        |         /|\
-      5 |          |
-        |          | 1
-       \|/         |
-       (1)------->(2)
-            3           */
-    int graph[N][N] = { { 0, 5, INF, 10 },
-                        { INF, 0, 3, INF },
-                        { INF, INF, 0, 1 },
-                        { INF, INF, INF, 0 } };
+//     /* Let us create the following weighted graph
+//             10
+//        (0)------->(3)
+//         |         /|\
+//       5 |          |
+//         |          | 1
+//        \|/         |
+//        (1)------->(2)
+//             3           */
+//     int graph[N][N] = { { 0, 5, INF, 10 },
+//                         { INF, 0, 3, INF },
+//                         { INF, INF, 0, 1 },
+//                         { INF, INF, INF, 0 } };
  
-    // Function call
-    floydWarshall(graph);
+//     // Function call
+//     floydWarshall(graph);
     
-    hasPath(1,2,graph);
-    shortestPath(1,2,graph);
+//     hasPath(1,2,graph);
+//     shortestPath(1,2,graph);
     
-    return 0;
+//     return 0;
 
     
-}
+// }
