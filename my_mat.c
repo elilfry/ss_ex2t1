@@ -16,16 +16,16 @@ void inputToArr(int arr[][N]) {
 
 int hasPath(int i, int j, int arr[][N]) {
     if (arr[i][j] == INF || arr[i][j] == 0) {
-        printf("No path between %d and %d exists\n", i, j);
+        printf(" False -No path between %d and %d exists\n", i, j);
         return 0;
     }
-    printf("The path between %d and %d exists\n", i, j);
+    printf("True The path between %d and %d exists\n", i, j);
     return 1;
 }
 
 int shortestPath(int i, int j, int arr[][N]) {
     if (arr[i][j] == INF || arr[i][j] == 0) {
-        printf("No path between %d and %d exists\n", i, j);
+        printf("-1  No path between %d and %d exists\n", i, j);
         return 0;
     }
     printf("The shortest path between %d and %d is %d\n", i, j, arr[i][j]);
@@ -68,7 +68,9 @@ void floydWarshall(int arr[][N])
 //     printSolution(dist);
 // }
 
-void printSolution(int dist[][N]) {
+
+//to delet 
+void printSolution(int dist[][N]) {    
     printf("The following matrix shows the shortest distances"
            " between every pair of vertices \n");
     for (int i = 0; i < N; i++) {
