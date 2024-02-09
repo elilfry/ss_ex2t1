@@ -5,30 +5,30 @@
 #define INF 9999
 
 void inputToArr(int arr[][N]) {
-    printf("Enter %d numbers:\n", N * N);
+  //  printf("Enter %d numbers:\n", N * N);
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             scanf("%d", &arr[i][j]);
         }
     }
-     printSolution(arr);
+    // printSolution(arr);
 }
 
 int hasPath(int i, int j, int arr[][N]) {
     if (arr[i][j] == INF || arr[i][j] == 0) {
-        printf(" False -No path between %d and %d exists\n", i, j);
+        printf("False \n");
         return 0;
     }
-    printf("True The path between %d and %d exists\n", i, j);
+    printf("True \n");
     return 1;
 }
 
 int shortestPath(int i, int j, int arr[][N]) {
-    if (arr[i][j] == INF || arr[i][j] == 0) {
-        printf("-1  No path between %d and %d exists\n", i, j);
+    if (arr[i][j] == 0) {
+        printf("-1  \n");
         return 0;
     }
-    printf("The shortest path between %d and %d is %d\n", i, j, arr[i][j]);
+    printf("%d\n", arr[i][j]);
     return 1;
 }
 void floydWarshall(int arr[][N])
@@ -50,39 +50,24 @@ void floydWarshall(int arr[][N])
             }
         }
     }
-    printSolution(arr);
 }
 
-// void floydWarshall(int dist[][N]) {
-//     int i, j, k;
-
-//     for (k = 0; k < N; k++) {
-//         for (i = 0; i < N; i++) {
-//             for (j = 0; j < N; j++) {
-//                 if (dist[i][k] + dist[k][j] < dist[i][j])
-//                     dist[i][j] = dist[i][k] + dist[k][j];
-//             }
-//         }
-//     }
-
-//     printSolution(dist);
-// }
 
 
 //to delet 
-void printSolution(int dist[][N]) {    
-    printf("The following matrix shows the shortest distances"
-           " between every pair of vertices \n");
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
-            if (dist[i][j] == INF)
-                printf("%7s", "INF");
-            else
-                printf("%7d", dist[i][j]);
-        }
-        printf("\n");
-    }
-}
+// void printSolution(int dist[][N]) {    
+//     printf("The following matrix shows the shortest distances"
+//            " between every pair of vertices \n");
+//     for (int i = 0; i < N; i++) {
+//         for (int j = 0; j < N; j++) {
+//             if (dist[i][j] == INF)
+//                 printf("%7s", "INF");
+//             else
+//                 printf("%7d", dist[i][j]);
+//         }
+//         printf("\n");
+//     }
+// }
 
 // int knapSack (int weights[], int values[] , int selected_bool[]){
 
