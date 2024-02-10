@@ -2,7 +2,9 @@
 #include <stdio.h>
 #include "my_mat.h"
 
-#define INF 9999
+#define INF 9999 //to delet !!!!!!!!
+#define  WEIGHT 20
+#define ARRLEN 5
 
 void inputToArr(int arr[][N]) {
   //  printf("Enter %d numbers:\n", N * N);
@@ -69,12 +71,37 @@ void floydWarshall(int arr[][N])
 //     }
 // }
 
-// int knapSack (int weights[], int values[] , int selected_bool[]){
+
+
+// Function to find maximum of two integers
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+// Function to solve 0-1 Knapsack problem
+int knapSack (int weights[], int values[] , int selected_bool[]){
+
+    int i, w;
+    int K[ARRLEN+ 1][WEIGHT+ 1];
+
+    
+    for (i = 0; i <= ARRLEN; i++) {
+        for (w = 0; w <= WEIGHT; w++) {
+            if (i == 0 || w == 0)
+                K[i][w] = 0;
+            else if (weights[i - 1] <= w)
+                K[i][w] = max(values[i - 1] + K[i - 1][w - weights[i - 1]], K[i - 1][w]);
+            else
+                K[i][w] = K[i - 1][w];
+        }
+    }
+
+    return K[ARRLEN][WEIGHT];
+}
 
 
 
 
-//     return 0;
-// }
+
 
 

@@ -1,23 +1,34 @@
-// #include <stdio.h>
-// #include "my_mat.h"
+#include <stdio.h>
+#include "my_mat.h"
 
-// #define  WEIGHT 20
-// #define ARRLEN 5
+#define  WEIGHT 20
+#define ARRLEN 5
 
-// int main(){
+int main(){
+    
 
-// int weights [N] ={'A','B','C','D','E'};
-// int values [N] ={0};
-// int selected_bool[N] ={0};
+char items [ARRLEN+1] = {0};
+int weights [ARRLEN] ={0};
+int values [ARRLEN] ={0};
+int selected_bool[ARRLEN] ={0};
 
-// for(int i=0;i<ARRLEN;i++){
-//     scanf("%d",&values[i]);
-// }
+for(int i=0;i<ARRLEN;i++){
+    scanf(" %c",&items[i]);
+    scanf("%d",&values[i]);
+    scanf("%d",&weights[i]);
+}
+ items[ARRLEN] = '\0'; // Null terminate the character array
 
-// for(int i=0;i<ARRLEN;i++){
-//     scanf("%d",&selected_bool[i]);
-// }
+
+printf("Maximum profit:%d\n",knapSack(weights,values,selected_bool) );
 
 
-// return 0;
-// }
+
+
+
+
+return 0;
+}
+
+
+
