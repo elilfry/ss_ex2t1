@@ -27,7 +27,7 @@ int hasPath(int i, int j, int arr[][N]) {
 
 int shortestPath(int i, int j, int arr[][N]) {
     if (arr[i][j] == 0) {
-        printf("-1  \n");
+        printf("-1\n");
         return 0;
     }
     printf("%d\n", arr[i][j]);
