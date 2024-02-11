@@ -96,6 +96,15 @@ int knapSack (int weights[], int values[] , int selected_bool[]){
         }
     }
 
+    // Backtrack to find selected items
+    w = WEIGHT;
+    for (i = ARRLEN; i > 0 && w > 0; i--) {
+        if (K[i][w] != K[i - 1][w]) {
+            selected_bool[i - 1] = 1;
+            w -= weights[i - 1];
+        }
+    }
+
     return K[ARRLEN][WEIGHT];
 }
 

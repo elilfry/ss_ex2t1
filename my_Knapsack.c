@@ -20,10 +20,14 @@ for(int i=0;i<ARRLEN;i++){
  items[ARRLEN] = '\0'; // Null terminate the character array
 
 
-printf("Maximum profit:%d\n",knapSack(weights,values,selected_bool) );
+printf("Maximum profit: %d\n",knapSack(weights,values,selected_bool) );
 
-
-
+printf("Selected items:");
+for(int i =0;i<ARRLEN;i++){
+    if (selected_bool[i] == 1)
+    printf(" %c", items[i]);
+}
+printf("\n");
 
 
 
