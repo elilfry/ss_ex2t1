@@ -27,7 +27,7 @@ for(int i =0;i<ARRLEN;i++){
     if (selected_bool[i] == 1)
     printf(" %c", items[i]);
 }
-printf("\n");
+
 
 
 

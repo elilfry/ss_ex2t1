@@ -6,7 +6,7 @@ int main() {
     int dist[N][N] = {0};
     char choice;
 
-    while (scanf(" %c", &choice) == 1 && choice != 'd' && choice != EOF) {
+    while (scanf(" %c", &choice) == 1 && choice != 'D' && choice != EOF) {
         switch (choice) {
             case 'A':
                 inputToArr(dist);
