@@ -15,7 +15,7 @@ my_graph.o: my_graph.c my_mat.h
 	$(CC) $(FLAGS) -c my_graph.c -fPIC
 
 my_Knapsack.o: my_Knapsack.c
-	$(CC) -Wall -g -c my_Knapsack.c -fPIC
+	$(CC) $(FLAGS) -c my_Knapsack.c -fPIC
 
 my_mat.o: my_mat.c my_mat.h 
 	$(CC) $(FLAGS)  -c my_mat.c -fPIC
