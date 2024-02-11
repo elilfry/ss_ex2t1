@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "my_mat.h"
 
-#define  WEIGHT 20
-#define ARRLEN 5
 
 int main(){
     
@@ -33,6 +31,5 @@ for(int i =0;i<ARRLEN;i++){
 
 return 0;
 }
-
 
 

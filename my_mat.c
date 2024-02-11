@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "my_mat.h"
 
-#define INF 9999 //to delet !!!!!!!!
+
 #define  WEIGHT 20
 #define ARRLEN 5
 
@@ -17,7 +17,7 @@ void inputToArr(int arr[][N]) {
 }
 
 int hasPath(int i, int j, int arr[][N]) {
-    if (arr[i][j] == INF || arr[i][j] == 0) {
+    if ( arr[i][j] == 0) {
         printf("False\n");
         return 0;
     }

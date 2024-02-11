@@ -2,7 +2,7 @@
 #define _MY_MAT_H
 #define N 10
 #define ARRLEN 5
-
+#define  WEIGHT 20
 
 
 void inputToArr(int arr[][N]);
