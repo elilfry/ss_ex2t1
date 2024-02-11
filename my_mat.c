@@ -18,10 +18,10 @@ void inputToArr(int arr[][N]) {
 
 int hasPath(int i, int j, int arr[][N]) {
     if (arr[i][j] == INF || arr[i][j] == 0) {
-        printf("False \n");
+        printf("False\n");
         return 0;
     }
-    printf("True \n");
+    printf("True\n");
     return 1;
 }
 

@@ -28,11 +28,6 @@ my_Knapsack: my_Knapsack.o libmy_mat.a
 	$(CC) $(FLAGS) my_Knapsack.o -L. -lmy_mat -o my_Knapsack
 
 
-
-
-
-
-
 .PHONY: clean all
 
 clean: 
