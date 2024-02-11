@@ -14,6 +14,7 @@ libmy_mat.a: my_mat.o
 my_graph.o: my_graph.c my_mat.h 
 	$(CC) $(FLAGS) -c my_graph.c -fPIC
 
+# Rule to compile my_Knapsack.c into an object file
 my_Knapsack.o: my_Knapsack.c
 	$(CC) $(FLAGS) -c my_Knapsack.c -fPIC
 

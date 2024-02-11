@@ -3,19 +3,19 @@
 #include "my_mat.h"
 
 
-#define  WEIGHT 20
-#define ARRLEN 5
 
+
+//a scan the input to array
 void inputToArr(int arr[][N]) {
-  //  printf("Enter %d numbers:\n", N * N);
+  
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             scanf("%d", &arr[i][j]);
         }
     }
-    // printSolution(arr);
+    
 }
-
+//b print true if there is a path or false if there is no path
 int hasPath(int i, int j, int arr[][N]) {
     if ( arr[i][j] == 0) {
         printf("False\n");
@@ -24,7 +24,7 @@ int hasPath(int i, int j, int arr[][N]) {
     printf("True\n");
     return 1;
 }
-
+//c print the shortest path or -1 if there is no path
 int shortestPath(int i, int j, int arr[][N]) {
     if (arr[i][j] == 0) {
         printf("-1\n");
@@ -33,6 +33,8 @@ int shortestPath(int i, int j, int arr[][N]) {
     printf("%d\n", arr[i][j]);
     return 1;
 }
+
+//function that run the floydWarshall algorithm
 void floydWarshall(int arr[][N])
 {
     for (int k = 0; k < N; k++)
@@ -53,24 +55,6 @@ void floydWarshall(int arr[][N])
         }
     }
 }
-
-
-
-//to delet 
-// void printSolution(int dist[][N]) {    
-//     printf("The following matrix shows the shortest distances"
-//            " between every pair of vertices \n");
-//     for (int i = 0; i < N; i++) {
-//         for (int j = 0; j < N; j++) {
-//             if (dist[i][j] == INF)
-//                 printf("%7s", "INF");
-//             else
-//                 printf("%7d", dist[i][j]);
-//         }
-//         printf("\n");
-//     }
-// }
-
 
 
 // Function to find maximum of two integers
